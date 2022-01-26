@@ -921,6 +921,24 @@
 # print(month(now))
 # print(day(now))
 # print(hour(now))
+# ---------------------------------------------------------------------------------
+# ĆWICZENIE
+# Napisz program w Pythonie, aby sprawdzić, czy dany ciąg jest liczbą, czy nie, używając lambda
+# Podpowiedź: przydatna metoda to
+# string.replace(oldvalue, newvalue, count)
+# Składnia parametrów:
+# oldvalue – Wymagany; ciąg do wyszukania
+# newvalue – Wymagany; ciąg znaków, który ma zastąpić starą wartość
+# count – Opcjonalny; liczba określająca, ile wystąpień starej wartości chcesz zastąpić;
+# domyślnie są to wszystkie wystąpienia
+#
+# x = "4.50"
+# y = lambda i: i.replace(".", "", 1).isdigit()
+# z = lambda j: y(j[1:]) if j[0]== "-" else y(j)
+# print(z(x))
+
+
+
 
 
 
