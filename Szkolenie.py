@@ -823,3 +823,16 @@
 # from functools import reduce
 # nums = [1, 2, 3, 4, 5]
 # print(reduce(lambda a, b: a + b, nums))
+# ---------------------------------------------------------------------------------
+# szesciany = []
+# for x in range(10):
+#     szesciany.append(x**3)
+# print(szesciany)
+# ---------------------------------------------------------------------------------
+# kwadraty = [el**2 for el in range(1, 102) if el % 2 != 0]
+# print(kwadraty)
+# ---------------------------------------------------------------------------------
+# tekst = "abracadabra"
+# wystapienia = {znak: tekst.count(znak) for znak in tekst}
+# print(wystapienia)
+# ---------------------------------------------------------------------------------
