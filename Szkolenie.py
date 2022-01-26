@@ -855,3 +855,24 @@
 #     sum += x
 # print(sum)
 # ---------------------------------------------------------------------------------
+# ĆWICZENIE
+# Utwórz funkcję lambda, która przyjmuje jeden parametr (a) i zwraca go
+#
+# x = lambda a : a
+# print(x(5))
+# ---------------------------------------------------------------------------------
+# ĆWICZENIE
+# Napisz program w Pythonie, aby utworzyć funkcję lambda, która dodaje 15
+# do podanej liczby przekazanej jako argument i zwraca to wynik. Następnie wydrukuj wynik.
+#
+# x = lambda a : a + 15
+# print(x(7))
+# ---------------------------------------------------------------------------------
+# ĆWICZENIE
+# Utwórz funkcję lambda, która mnoży
+# argument x przez argument y i zwraca to wynik. Następnie wydrukuj wynik.
+
+# r = lambda x, y: x * y
+# print(r(3, 4))
+# ---------------------------------------------------------------------------------
+# ĆWICZENIE
