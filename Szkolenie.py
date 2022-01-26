@@ -836,3 +836,7 @@
 # wystapienia = {znak: tekst.count(znak) for znak in tekst}
 # print(wystapienia)
 # ---------------------------------------------------------------------------------
+# list_comp = [x ** 0.5 for x in range(1, 11)]
+# gene_expr = (x ** 0.5 for x in range(1, 11))
+# for x in list_comp:
+#     print(x)
