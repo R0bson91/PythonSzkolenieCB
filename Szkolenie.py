@@ -840,3 +840,18 @@
 # gene_expr = (x ** 0.5 for x in range(1, 11))
 # for x in list_comp:
 #     print(x)
+# ---------------------------------------------------------------------------------
+# list_comp = [x ** 0.5 for x in range(1, 50000001)]
+# sum = 0
+# for x in list_comp:
+#     sum += x
+# print(sum)
+# ---------------------------------------------------------------------------------
+# gene_expr = (x ** 0.5 for x in range(1, 50000001))
+# # gene_expr nie obliczyło jeszcze tych milionów pierwiastków
+# sum = 0
+# for x in gene_expr:
+#     # teraz już kolejne elementy wyrażenia generatorowego są obliczane
+#     sum += x
+# print(sum)
+# ---------------------------------------------------------------------------------
