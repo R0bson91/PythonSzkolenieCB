@@ -448,8 +448,6 @@
 # print(ciag(5))
 # ---------------------------------------------------------------------------------
 #
-#
-#
 # WYJATKI
 # print(5 * (1/0))
 # print(4 + x * 3)
@@ -903,8 +901,26 @@
 # print(y(x))
 # ---------------------------------------------------------------------------------
 # ĆWICZENIE
+# Napisz program w Pythonie, aby wyodrębnić rok, miesiąc, dzień i godzinę za pomocą lambda
+# Podpowiedź: skorzystaj z modułu datetime:
+# now = datetime.datetime.now() - przypisuje do nowaktualną lokalną datę i godzinę.
+# now.year - wyodrębnia i zwraca rok z now.
+# now.month - wyodrębnia i zwraca miesiąc z now.
+# now.day - wyodrębnia i zwraca dzień z now.
+# now.time() - wyodrębnia i zwraca godzinę z now.
 
-
+# import datetime
+# now = datetime.datetime.now()
+#
+# year = lambda i: i.year
+# month = lambda b: b.month
+# day = lambda c: c.day
+# hour = lambda d: d.time()
+#
+# print(year(now))
+# print(month(now))
+# print(day(now))
+# print(hour(now))
 
 
 
