@@ -869,10 +869,45 @@
 # print(x(7))
 # ---------------------------------------------------------------------------------
 # ĆWICZENIE
-# Utwórz funkcję lambda, która mnoży
-# argument x przez argument y i zwraca to wynik. Następnie wydrukuj wynik.
+# Utwórz funkcję lambda, która mnoży argument x przez argument y i zwraca to wynik.
+# Następnie wydrukuj wynik.
 
 # r = lambda x, y: x * y
 # print(r(3, 4))
 # ---------------------------------------------------------------------------------
 # ĆWICZENIE
+# Napisz program w Pythonie wsparcia sortowania listy krotek za pomocą lambda po drugim elemencie
+
+# subject_marks = [('Język angielski', 88),
+#                  ('Nauka',           90),
+#                  ('Matematyka',      97),
+#                  ('Nauki społeczne', 82)]
+#
+# print(sorted(subject_marks, key = lambda krotka: krotka[1]))
+# ---------------------------------------------------------------------------------
+# ĆWICZENIE
+# Napisz program w Pythonie, aby posortować za pomocą lambda listę słowników po kluczu model lub kolor.
+#
+# models = [{'marka': 'Nokia',   'model': '3310',   'kolor': 'Czarny'},
+#           {'marka': 'Apple',   'model': '11',     'kolor': 'Złoty'},
+#           {'marka': 'Samsung', 'model': 'Galaxy', 'kolor': 'Srebrny'}]
+#
+# print(sorted(models, key = lambda a: a['model']))
+# ---------------------------------------------------------------------------------
+# ĆWICZENIE
+# Napisz program w Pythonie, aby sprawdzić, czy dany ciąg (str) zaczyna się od znaku ‘P’,
+# używając lambda # Podpowiedź: skorzystaj z funkcji (metody) startswith()
+
+# x = "Python"
+# y = lambda i: i.startswith('P')
+# print(y(x))
+# ---------------------------------------------------------------------------------
+# ĆWICZENIE
+
+
+
+
+
+
+
+
