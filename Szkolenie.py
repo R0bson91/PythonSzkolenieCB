@@ -1377,25 +1377,180 @@
 # Następnie musisz przypisać ten parametr do atrybutu self, aby istniało sensowne połączenie między parametrem a atrybutem.
 # Wskazówka 3
 # Możesz tworzyć instancje klasy Jets jak poniżej:
+# first_item=Jets("F14","USA",87)
+# second_item=Jets("Mirage2000","France",35)
+#
+# class Jets:
+#     def __init__(self, name, country, quantity):
+#         self.name = name
+#         self.origin = country
+#         self.quantity = quantity
+# first_item=Jets("F14","USA",87)
+# second_item=Jets("Mirage2000","France",35)
+#
+# total= first_item.quantity + second_item.quantity
+# print(total)
+# ---------------------------------------------------------------------------------
+# OOP - dziedziczenie
+#
+# class KontoBankowe:
+#     def __init__(self, nazwa, stan=0):
+#         self.nazwa = nazwa
+#         self.stan = stan
+#
+#     def info(self):
+#         print("nazwa:", self.nazwa)
+#         print("stan:", self.stan)
+#
+#     def wyplac(self, ilosc):
+#         self.stan -= ilosc
+#
+#     def wplac(self, ilosc):
+#         self.stan += ilosc
+#
+# class KontoDebetowe(KontoBankowe):
+#     pass
+#
+# class KontoDebetowe(KontoBankowe):
+#     def __init__(self, nazwa, stan=0, limit=0):
+#         KontoBankowe.__init__(self, nazwa, stan)
+#         self.limit = limit
+#
+#     def wyplac(self, ilosc):
+#         """Jeżeli stan konta po operacji przekroczyłby limit, przerwij."""
+#         if (self.stan - ilosc) < (-self.limit):
+#             print("Brak srodkow na koncie")
+#         else:
+#             KontoBankowe.wyplac(self, ilosc)
+#
+# account = KontoDebetowe("Jan Nowak", 0, 1000)
+# account.info()
+# account.wplac(500)
+# account.info()
+# account.wyplac(1000)
+# account.info()
+# account.wyplac(1000)
+# account.info()
+#
+# # # bylo:
+# # def __init__(self, nazwa, stan=0, limit=0):
+# #     KontoBankowe.__init__(self, nazwa, stan)
+# #     self.limit = limit
+# #
+# # # jest:
+# # def __init__(self, nazwa, stan=0, limit=0):
+# #     super().__init__(nazwa, stan)
+# #     self.limit = limit
+#
+# class KontoDebetowe(KontoBankowe):
+#     def __init__(self, nazwa, stan=0, limit=0):
+#         super().__init__(nazwa, stan)
+#         self.limit = limit
+#
+#     def wyplac(self, ilosc):
+#         """Jeżeli stan konta po operacji przekroczyłby limit, przerwij."""
+#         if (self.stan - ilosc) < (-self.limit):
+#             print("Brak srodkow na koncie")
+#         else:
+#             super().wyplac(ilosc)
+# ---------------------------------------------------------------------------------
+# class A:
+#     """Rodzic pierwszy"""
+#
+#     def __init__(self):
+#         super().__init__()
+#         self.a = "A"
+#
+#     def fa(self):
+#         print("a:", self.a)
+#
+# class B:
+#     """Rodzic drugi"""
+#
+#     def __init__(self):
+#         super().__init__()
+#         self.b = "B"
+#
+#     def fb(self):
+#         print("b:", self.b)
+#
+#
+# class Pochodna(B, A):
+#     """Dziecko"""
+#
+#     def __init__(self):
+#         super().__init__()
+#
+# print(A.__doc__)
+# print(B.__doc__)
+# print(Pochodna.__doc__)
+#
+# d = Pochodna()
+# print(d.a)
+# print(d.b)
+# d.fa()
+# d.fb()
+# ---------------------------------------------------------------------------------
+# CWICZENIE
+#
+# import math
+#
+#
+# class Figura:
+#     def obwod(self):  # L
+#         """Obliczanie obwodu."""
+#         raise NotImplementedError
+#
+#     def pole(self):  # S/P
+#         """Obliczanie pola powierzchni."""
+#         raise NotImplementedError
+#
+# class Kolo(Figura):
+#     def __init__(self, r):
+#         self.r = r
+#     def obwod(self):
+#         return 2 * math.pi * self.r
+#     def pole(self):
+#         return self.r ** 2 * math.pi
+#
+# k = Kolo(5)
+# o = Kolo(5)
+# print(k.pole())
+# print(o.obwod())
 
-first_item=Jets("F14","USA",87)
-second_item=Jets("Mirage2000","France",35)
+# import math
+#
+#
+# class Figura:
+#     def obwod(self):  # L
+#         """Obliczanie obwodu."""
+#         raise NotImplementedError
+#
+#     def pole(self):  # S/P
+#         """Obliczanie pola powierzchni."""
+#         raise NotImplementedError
+#
+# class Trojkat(Figura):
+#     def __init__(self, a):
+#         self.a = a
+#     def obwod(self):
+#         return 3 * self.a
+#     def pole(self):
+#         return self.a ** 2 * 3 **(1/2)/4
+#
+# p = Trojkat(3)
+# print(p.obwod())
+# print(p.pole())
 
-class Jets:
-    def __init__(self, name, country, quantity):
-        self.name = name
-        self.origin = country
-        self.quantity = quantity
-first_item=Jets("F14","USA",87)
-second_item=Jets("Mirage2000","France",35)
-
-total= first_item.quantity + second_item.quantity
-print(total)
+import math
 
 
+class Figura:
+    def obwod(self):  # L
+        """Obliczanie obwodu."""
+        raise NotImplementedError
 
-
-
-
-
+    def pole(self):  # S/P
+        """Obliczanie pola powierzchni."""
+        raise NotImplementedError
 
