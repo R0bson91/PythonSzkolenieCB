@@ -1491,10 +1491,9 @@
 # d.fa()
 # d.fb()
 # ---------------------------------------------------------------------------------
-# CWICZENIE
+# CWICZENIE - KOŁO
 #
 # import math
-#
 #
 # class Figura:
 #     def obwod(self):  # L
@@ -1517,9 +1516,10 @@
 # o = Kolo(5)
 # print(k.pole())
 # print(o.obwod())
-
-# import math
+# ---------------------------------------------------------------------------------
+# CWICZENIE - TRÓJKĄT
 #
+# import math
 #
 # class Figura:
 #     def obwod(self):  # L
@@ -1541,16 +1541,59 @@
 # p = Trojkat(3)
 # print(p.obwod())
 # print(p.pole())
+# ---------------------------------------------------------------------------------
+# CWICZENIE - PROSTOKĄT
+#
+# import math
+#
+# class Figura:
+#     def obwod(self):  # L
+#         """Obliczanie obwodu."""
+#         raise NotImplementedError
+#
+#     def pole(self):  # S/P
+#         """Obliczanie pola powierzchni."""
+#         raise NotImplementedError
+#
+# class Prostokat(Figura):
+#     def __init__(self, a, b):
+#         self.a = a
+#         self.b = b
+#     def obwod(self):
+#         return 2*self.a + 2*self.b
+#     def pole(self):
+#         return self.a * self.b
 
-import math
-
-
-class Figura:
-    def obwod(self):  # L
-        """Obliczanie obwodu."""
-        raise NotImplementedError
-
-    def pole(self):  # S/P
-        """Obliczanie pola powierzchni."""
-        raise NotImplementedError
-
+# p = Prostokat(3,4)
+# print(p.obwod())
+# print(p.pole())
+#
+# ---------------------------------------------------------------------------------
+# CWICZENIE - KWADRAT - DZIEDZICZENIE PO PROSTOKACIE
+#
+# import math
+#
+# class Figura:
+#     def obwod(self):  # L
+#         """Obliczanie obwodu."""
+#         raise NotImplementedError
+#
+#     def pole(self):  # S/P
+#         """Obliczanie pola powierzchni."""
+#         raise NotImplementedError
+#
+# class Kwadrat(Prostokat):
+#     def __init__(self, a):
+#         self.a = a
+#         self.b = a
+#     # def obwod(self):
+#     #     return 4*self.a
+#     # def pole(self):
+#     #     return self.a ** 2
+#
+# p = Kwadrat(3)
+# print(p.obwod())
+# print(p.pole())
+#
+# ---------------------------------------------------------------------------------
+# CWICZENIE -
