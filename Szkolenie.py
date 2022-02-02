@@ -1727,4 +1727,34 @@
 #
 # print(bus.kolor)
 # print(car.kolor)
+# ---------------------------------------------------------------------------------
+# CWICZENIE
+# Dane:
+# Utwórz podrzędną klasę Bus, która dziedziczy po klasie Vehicle. Domyślna opłata za przejazd dla dowolnego pojazdu to liczba miejsc * 100.
+# Natomiast jeśli School_bus to instancja klasy Bus, musimy dodać dodatkowe 10% do pełnej ceny jako opłatę za utrzymanie.
+# Tak więc łączna opłata za przejazd autobusem stanie się ostateczną kwotą = opłata całkowita + 10% ceny całkowitej.
+# Uwaga: autobus może pomieścić 50 osób, więc ostateczna kwota taryfy powinna wynosić 5500. Musisz zastąpić metodę fare() klasy Vehicle w klasie Bus.
+# Użyj poniższego kodu dla swojej nadrzędnej klasy Vehicle. Musimy uzyskać dostęp do klasy nadrzędnej z wnętrza metody klasy potomnej.
 #
+# class Vehicle:
+#     def __init__(self, name, mileage, capacity):
+#         self.name = name
+#         self.mileage = mileage
+#         self.capacity = capacity
+#
+#     def fare(self):
+#         return self.capacity * 100
+#
+# class Bus(Vehicle):
+#     def fare(self):
+#         kwota = Vehicle.fare(self)
+#         return kwota * 1.1
+#
+# school_bus = Bus("Szkolne Volvo", 12, 50)
+# print("Całkowita opłata za przejazd autobusem wynosi:", school_bus.fare())
+# ---------------------------------------------------------------------------------
+# CWICZENIE
+#
+
+
+
