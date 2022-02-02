@@ -1596,4 +1596,59 @@
 # print(p.pole())
 #
 # ---------------------------------------------------------------------------------
-# CWICZENIE -
+# CWICZENIE - RÓWNOLEGŁOBOK
+#
+# import math
+#
+# class Figura:
+#     def obwod(self):  # L
+#         """Obliczanie obwodu."""
+#         raise NotImplementedError
+#
+#     def pole(self):  # S/P
+#         """Obliczanie pola powierzchni."""
+#         raise NotImplementedError
+#
+# class Rownoleglobok(Figura):
+#     def __init__(self, a, b, h):
+#         self.a = a
+#         self.b = b
+#         self.h = h
+#     def obwod(self):
+#         return 2*self.a + 2*self.b
+#     def pole(self):
+#         return self.a * self.h
+#
+# p = Rownoleglobok(3,4,6)
+# print(p.obwod())
+# print(p.pole())
+#
+# ---------------------------------------------------------------------------------
+# CWICZENIE - TRAPEZ PROSTOKĄTNY
+#
+import math
+
+class Figura:
+    def obwod(self):  # L
+        """Obliczanie obwodu."""
+        raise NotImplementedError
+
+    def pole(self):  # S/P
+        """Obliczanie pola powierzchni."""
+        raise NotImplementedError
+
+class Trapez(Figura):
+    def __init__(self, a, b, c, d, h):
+        self.a = a
+        self.b = b
+        self.c = c
+        self.d = d
+        self.h = h
+    def obwod(self):
+        return self.a + self.b + self.c + self.d
+    def pole(self):
+        return self.h * ((self.a + self.b)/2)
+
+p = Trapez(3,4,6,7,9)
+print(p.obwod())
+print(p.pole())
