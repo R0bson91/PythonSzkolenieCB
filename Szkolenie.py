@@ -1669,3 +1669,62 @@
 # print(poj.mileage, poj.name, poj.max_speed)
 # ---------------------------------------------------------------------------------
 # CWICZENIE - dziedziczenie klas
+# Utwórz klasę Bus, która dziedziczy po klasie Vehicle. Podaj argument pojemności w metodzie
+# Bus.seating_capacity() o domyślnej wartości 50.
+# Dane wejściowe:
+# Użyj poniższego kodu dla swojej nadrzędnej klasy Vehicle.
+# Musisz przesłonić/nadpisać metodę - w klasie pochodnej na specyficznie zaimplementować metodę
+# która została już zdefiniowana w klasie bazowej.
+#
+# Oczekiwany wynik:
+# Liczba miejsc siedzących w Szkolne Volvo to 50 pasażerów
+
+# class Vehicle:
+#     def __init__(self, name, max_speed, mileage):
+#         self.name = name
+#         self.max_speed = max_speed
+#         self.mileage = mileage
+#
+#     def seating_capacity(self, capacity):
+#         return f"Liczba miejsc siedzących w {self.name} to {capacity} pasażerów"
+#
+# class Bus(Vehicle):
+#     def seating_capacity(self, capacity=50):
+#         return super().seating_capacity(capacity)
+#
+# k = Bus("bus", 80, 500)
+# print(k.mileage, k.name, k.max_speed, k.seating_capacity())
+# ---------------------------------------------------------------------------------
+# CWICZENIE - Zdefiniuj atrybut (właściwość), który powinna mieć taką samą wartość
+# dla każdej instancji klasy
+# Zdefiniuj atrybut klasy „color” z domyślną wartością biały. Oznacza to, że każdy Vehicle (pojazd) powinien być biały.
+# Użyj poniższego kodu do tego ćwiczenia.
+# Oczekiwany wynik:
+# Kolor: Biały, Nazwa pojazdu: Szkolne Volvo, Prędkość: 180, Przebieg: 12
+# Kolor: Biały, Nazwa pojazdu: Audi Q5, Prędkość: 240, Przebieg: 18
+# Podpowiedź: Zmienne utworzone w .__init__() nazywane są zmiennymi instancji. Wartość zmiennej instancji jest specyficzna dla konkretnego wystąpienia klasy.
+# Na przykład w rozwiązaniu obiekty wszystkie obiekty Vehicle mają name i max_speed, ale  wartości
+# zmiennych name i max_speed będą się różnić w zależności od instancji Vehicle. # Z drugiej
+# strony atrybuty klasy to atrybuty, które mają tę samą wartość dla wszystkich instancji klas.
+# Możesz zdefiniować atrybut klasy, przypisując wartość do nazwy zmiennej poza .__init__().
+#
+# class Vehicle:
+#
+#     def __init__(self, name, max_speed, mileage):
+#         self.name = name
+#         self.max_speed = max_speed
+#         self.mileage = mileage
+#     kolor = "Biały"
+#
+# class Bus(Vehicle):
+#     pass
+#
+# class Car(Vehicle):
+#     pass
+#
+# bus = Bus("Volvo", 180, 12)
+# car = Car("Audi", 240, 18)
+#
+# print(bus.kolor)
+# print(car.kolor)
+#
