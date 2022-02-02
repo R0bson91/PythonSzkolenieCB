@@ -936,7 +936,461 @@
 # y = lambda i: i.replace(".", "", 1).isdigit()
 # z = lambda j: y(j[1:]) if j[0]== "-" else y(j)
 # print(z(x))
+# ---------------------------------------------------------------------------------
+# Ćwiczenie
+# Napisz program w Pythonie do filtrowania listy liczb parzystych i nieparzystych całkowitych za pomocą lambda i filter
+#
+# lista = [1,2,3,4,5,6,7,8,9,10]
+# wynik = list(filter(lambda x: x % 2 == 0, lista))
+# print(wynik)
+# ---------------------------------------------------------------------------------
+# Ćwiczenie
+# Napisz program w Pythonie, aby znaleźć przecięcie dwóch podanych list za pomocą lambda i filter
+#
+# array_nums1 = [1, 2, 3, 5, 7, 8, 9, 10]
+# array_nums2 = [1, 2, 4, 8, 9]
+# czesc_wspolna = list(filter(lambda x: x in array_nums1, array_nums2))
+# print(czesc_wspolna)
+# ---------------------------------------------------------------------------------
+# Ćwiczenie
+# Napisz program w Pythonie, aby policzyć parzyste i nieparzyste liczby w danej tablicy liczb całkowitych, używając lambda i filter
+#
+# lista = [1,2,3,4,5,6,7,8,9,10]
+# wynik = list(filter(lambda x: x % 2 == 0, lista))
+# print(len(wynik))
+# ---------------------------------------------------------------------------------
+# Ćwiczenie
+# Napisz program w Pythonie, aby znaleźć wartości o długości sześć na podanej liście za pomocą funkcji lambda i filter
+#
+# weekdays = ['Poniedziałek', 'Wtorek', 'Środa', 'Czwartek', 'Piątek', 'Sobota', 'Niedziela']
+# wynik = list(filter(lambda x : len(x) == 6, weekdays))
+# print(wynik)
+# ---------------------------------------------------------------------------------
+# Ćwiczenie
+#
+# Napisz program w Pythonie, aby znaleźć liczby podzielne przez dziewiętnaście lub trzynaście z listy liczb za pomocą lambda i filter
+#
+# nums = [19, 65, 57, 39, 152, 639, 121, 44, 90, 190]
+# wynik = list(filter(lambda x : x % 19 == 0 or x % 13 == 0, nums))
+# print(wynik)
+# ---------------------------------------------------------------------------------
+# Ćwiczenie
+# Napisz program w Pythonie, aby znaleźć palindromy na podanej liście ciągów za pomocą lambda i filter
+# Palindrom – wyrażenie brzmiące tak samo czytane od lewej do prawej i od prawej do lewej
+# Przykładem palindromu jest: „kobyła ma mały bok”
+#
+# texts = ["php", "w3r", "Python", "abcd", "Java", "aaa"]
+# palindrom = list(filter(lambda x: x[0:] == x[::-1],texts))
+# print(palindrom)
+# ---------------------------------------------------------------------------------
+# Ćwiczenie
+# Napisz program w Pythonie, który zsumuje długość imion z danej listy imion po usunięciu imion zaczynających się od małej litery
+# Użyj funkcji lambda
+#
+# sample_names = ['antoni', 'Jakub', 'zuzanna', 'Julia', 'Jan', 'szymon']
+# duze_imiona = list(filter(lambda x: x[0].isupper() and x[1:].islower(), sample_names))
+# x= ", ".join(duze_imiona)
+# print(len(duze_imiona))
+# print(len(x))
+# print(x)
+# ---------------------------------------------------------------------------------
+# Ćwiczenie
+# Napisz program w Pythonie podnoszący do kwadratu i sześcianu każdą liczbę z podanej listy liczb całkowitych, używając lambda i map
 
+# nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# lista = list(map(lambda x: x**2, nums))
+# print(lista)
+# ---------------------------------------------------------------------------------
+# Ćwiczenie
+# Napisz program w Pythonie, aby dodać dwie podane listy za pomocą map i lambda
+#
+# nums1 = [1, 2, 3]
+# nums2 = [4, 5, 6]
+# lista = list(map(lambda x,y: x+y ,nums1, nums2))
+# print(lista)
+# ---------------------------------------------------------------------------------
+# Ćwiczenie
+# Napisz program w Pythonie, który za pomocą funkcji lambdamnoży każdą liczbę z podanej listy przez określoną liczbę
+# Wydrukuj wynik
+#
+# nums = [2, 4, 6, 9, 11]
+# n = 2
+# lista = list(map(lambda x: x*n , nums))
+# print(lista)
+# ---------------------------------------------------------------------------------
+# Ćwiczenie
+#
+# Napisz program w Pythonie, który usuwa liczby dodatnie z podanej listy liczb. Zsumuj liczby ujemne i wydrukuj wartość bezwzględną
+# za pomocą tworzenia listy – ang. list comprehension. Wydrukuj wynik
+#
+# nums = [2, 4, -6, -9, 11, -12, 14, -5, 17]
+# print(abs(sum([x for x in nums if x<0])))
+# ---------------------------------------------------------------------------------
+# Ćwiczenie
+#
+# Napisz program w Pythonie, aby zmienić kolejność liczb dodatnich i ujemnych w danej liście (najpierw wszystkie ujemne,
+# potem wszystkie dodatnie) za pomocą tworzenia listy – ang. list comprehension
+#
+# array_nums = [-1, 2, -3, 5, 7, 8, 9, -10]
+# nums = [x for x in array_nums if x<0] + [x for x in array_nums if x>0]
+# print(nums)
+# ---------------------------------------------------------------------------------
+# Ćwiczenie
+#
+# Napisz program w Pythonie, aby:
+# Znaleźć liczby z podanego ciągu
+# Zapisać je na liście
+# Wyświetlić liczby w posortowanej formie
+# Użyj funkcji tworzenia listy – ang. list comprehension, aby rozwiązać problem
+#
+# str1 = "sdf 23 safs8 5 sdfsd8 sdfs 56 21sfs 20 5"
+# new_list = str1.split()
+# numery = sorted([int(z) for z in new_list if z.isdigit()])
+# print(numery)
+# ---------------------------------------------------------------------------------
+# PROGRAMOWANIE OBIEKTOWE
+
+# x = 4
+# print(type(x))
+#
+# x = 'Hello'
+# print(type(x))
+#
+# x = 3.14565
+# print(type(x))
+#
+# x = 4
+# print(id(x))
+#
+# x = 'Hello'
+# print(id(x))
+#
+# x = 4.14567
+# print(id(x))
+#
+# lst = [1,2,3]
+# print(id(lst))
+# print(type(lst))
+#
+# L = [1,2,3]
+# L.append(100)
+# print(L)
+#
+# x = 4.5
+# print(x.real, "+", x.imag, 'i')
+#
+# f = open("test.txt", "w")
+# print(type(f))
+#
+# numbers = [6,9,3,1]
+# print(sorted(numbers))
+#
+# x = 4.0
+# print(x)
+# print(type(x))
+# print(x.real, "+", x.imag, 'i')
+# print(x.is_integer())
+# ---------------------------------------------------------------------------------
+# KLASY
+#
+# class NazwaKlasy:
+#     pass
+#
+# obiekt = NazwaKlasy()
+# instancja = NazwaKlasy()
+#
+# print(type(obiekt))
+# print(type(instancja))
+# print(id(obiekt))
+# print(id(instancja))
+# print(obiekt)
+# ---------------------------------------------------------------------------------
+# class NazwaKlasy:
+#     def nazwa_metody(self, argument1, argument2): # jedno wcięcie
+#         print(argument1) # drugie wcięcie
+#         print(argument2)
+# obiekt = NazwaKlasy()
+# obiekt.nazwa_metody("arg1", "arg2")
+#
+#
+# """Dokumentacja modułu"""
+#
+# class MyClass:
+#     """Dokumentacja klasy"""
+#
+#     def my_method(self):
+#         """Dokumentacja metody"""
+#
+# def my_function():
+#     """Dokumentacja funkcji"""
+#
+# help(MyClass)
+# help(MyClass.my_method)
+#
+# class NazwaKlasy:
+#     atrybut_pierwszy = "Wartość"
+#     atrybut_drugi = 123.0
+# class NazwaKlasy:
+#     def __init__(self, trzeci):
+#      self.atrybut_pierwszy = "Wartość"
+#      self.atrybut_drugi = 123.0
+#      self.atrybut_trzeci = trzeci
+# instancja = NazwaKlasy("trzeci")
+# print(instancja.atrybut_pierwszy)
+# print(instancja.atrybut_drugi)
+# print(instancja.atrybut_trzeci)
+#
+# class MyClass:
+#     x = 5
+# p1 = MyClass()
+# print(p1.x)
+#
+# class Parrot:
+#     pass
+# obj = Parrot()
+# ---------------------------------------------------------------------------------
+# class Parrot:
+#
+#     # atrybut klasy
+#     species = "ptak"
+#     # atrybut instancji
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+# # utworzenie instancji klasy Parrot
+# blu = Parrot("Blu", 10)
+# woo = Parrot("Woo", 15)
+# # uzyskanie dostępu do atrybutów klasy
+# print("Blu to", blu.__class__.species)
+# print("Woo to również", woo.__class__.species)
+# # za chwilę wytłumaczymy sobie dokładniej o co chodzi z __class__
+# # uzyskanie dostępu do atrybutów instancji
+# print(blu.name, "ma", blu.age, "lat")
+# print(woo.name, "ma", woo.age, "lat")
+# ---------------------------------------------------------------------------------
+# class Parrot:
+#
+#     # atrybuty instancji
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+#     # metoda instancji
+#     def sing(self, song):
+#         return self.name + " śpiewa " + song
+#
+#     def dance(self):
+#         return self.name + " teraz tańczy"
+# # utworzenie wystąpienia obiektu
+# blu = Parrot("Blu", 10)
+# ---------------------------------------------------------------------------------
+#
+# class Person:
+#
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+# p1 = Person("Jan", 36)
+# print(p1.name)
+# print(p1.age)
+# ---------------------------------------------------------------------------------
+#
+# class Person:
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+#     def myfunc(self):
+#         print("Cześć, mam na imię " + self.name)
+# p1 = Person("Jan", 36)
+# p1.myfunc()
+# ---------------------------------------------------------------------------------
+#
+# class Person:
+#     def __init__(mysillyobject, name, age):
+#         mysillyobject.name = name
+#         mysillyobject.age = age
+#
+#     def myfunc(abc):
+#         print("Cześć, mam na imię " + abc.name)
+# p1 = Person("Jan", 36)
+# p1.myfunc()
+# ---------------------------------------------------------------------------------
+# CWICZENIE
+# Klasa o nazwie MyClass z atrybutem o nazwie x No to jeszcze raz! Utwórz klasę o
+# nazwie MyClass z atrybutem o nazwie x = 5. Teraz użyj klasy o nazwie MyClass do
+# stworzenia obiektu. Utwórz obiekt o nazwie p1 i wydrukuj wartość x.
+#
+# class MyClass:
+#     x = 5
+# p1 = MyClass()
+# print(p1.x)
+# ---------------------------------------------------------------------------------
+# CWICZENIE
+#
+# class KontoBankowe:
+#     def __init__(self, nazwa, stan = 0):
+#         self.nazwa = nazwa
+#         self.stan = stan
+#
+#     def info(self):
+#         print("nazwa:", self.nazwa)
+#         print("stan:", self.stan)
+#
+#     def wyplac(self, ilosc):
+#         self.stan -= ilosc
+#
+#     def wplac(self, ilosc):
+#         self.stan += ilosc
+#
+# jk = KontoBankowe("Jan Kowalski", 1000)
+# jk.info()
+# jk.wplac(2000)
+# jk.wyplac(2500)
+# jk.info()
+# jk.stan = 0  # Dostęp do składowej `stan`
+# jk.info()
+# ---------------------------------------------------------------------------------
+# CWICZENIE
+# Klasa (class) dotycząca wyimaginowanego inwentarza odrzutowca jest już # dla Was
+# zdefiniowana. Również instancja tej klasy Jets jest stworzona i przypisana do zmiennej first_item.
+# Wydrukuj name z first_item.
+# Wskazówka: Atrybut name można wywołać dodając go do instancji class, na
+# przykład: anyinstance.name
+#
+# class Jets:
+#
+#
+#     def __init__(self, name, country):
+#         self.name = name
+#         self.origin = country
+#
+# first_item = Jets("F16", "USA")
+#
+# a=first_item.name
+# print(a)
+# ---------------------------------------------------------------------------------
+# CWICZENIE
+# Tym razem wydrukuj origin z first_item.
+#
+# class Jets:
+#     model = None
+#     country = 0
+#
+#     def __init__(self, name, country):
+#         self.name = name
+#         self.origin = country
+#
+# first_item = Jets("F16", "USA")
+#
+# a=first_item.name
+# b=first_item.origin
+#
+# print(a,b)
+# ---------------------------------------------------------------------------------
+# CWICZENIE
+# Utwórz klasę Vehicle z atrybutami instancji max_speed i mileage. Stwórz obiekt i
+# w trakcie inicjacji przypisz jego atrybutom (odpowiednio) wartości 240 i 18.
+# Wydrukuj te atrybuty.
+#
+# class Vehicle:
+#     def __init__(self, max_speed, mileage):
+#         self.max_speed = max_speed
+#         self.mileage = mileage
+# a = Vehicle(240, 18)
+#
+# print(a.max_speed,",",a.mileage)
+# ---------------------------------------------------------------------------------
+# CWICZENIE
+# Utwórz klasę Car z dwoma atrybutami instancji:
+# .color, który przechowuje nazwę koloru samochodu jako ciąg testowy (str)
+# .mileage, który przechowuje liczbę kilometrów przejechanych przez samochód jako liczbę całkowitą (int)
+# Następnie utwórz instancję dwóch obiektów Car - niebieski samochód mający 20 000 kilometrów przebiegu
+# i czerwony samochód mający 30 000 kilometrów przebiegu - i wydrukuj ich kolory oraz przebiegi.
+# Twój wynik powinien wyglądać następująco:
+# Niebieski samochód ma 20,000 kilometrów przebiegu.
+# Czerwony samochód ma 30,000 kilometrów przebiegu.
+#
+# class Car:
+#     def __init__(self, color, mileage):
+#         self.color = color
+#         self.mileage = mileage
+# x = Car(color = "niebieski" , mileage = 20000)
+# y = Car(color = "czerwony", mileage =30000)
+# z = Car(color = "zielony", mileage =40000)
+# print(x.color, x.mileage)
+# print(y.color, y.mileage)
+# print(z.color, z.mileage)
+#
+# for petla in (x,y,z):
+#     print(petla.color, petla.mileage)
+# ---------------------------------------------------------------------------------
+# CWICZENIE
+# Stwórz nowe instancje od pierwszej do szóstej pozycji w tej kolejności: F14, SU 33, AJS37, Mirage 2000, Mig 29, A10.
+# Możesz sprawdzić Podpowiedź 1, aby sprawdzić origin.
+# Wskazówka 1
+# SU33: Rosja
+# AJS37: Szwecja
+# Mirage2000: Francja
+# F14: USA
+# Mig29: ZSRR
+# A10: USA
+# Wskazówka 2
+# Możesz utworzyć instancje w następujący sposób:
+# first_item=Jets(name, country)
+#
+# class Jets:
+#     def __init__(self, name, country):
+#         self.name = name
+#         self.origin = country
+#     def x(self, drugi):
+#         print(self.name, self.origin)
+#         print(drugi.name, drugi.origin)
+#
+# first_item=Jets(name = "F14", country = "USA")
+# second_item=Jets(name = "SU33", country = "Rosja")
+# third_item=Jets(name = "AJS37", country = "Szwecja")
+# fourth_item=Jets(name = "Mirage2000", country = "Francja")
+# fifth_item=Jets(name = "Mig29", country = "ZSRR")
+# sixth_item=Jets(name = "A10", country = "USA")
+#
+# first_item.x(second_item)
+# third_item.x(second_item)
+#
+# first_army=[first_item.name,second_item.name,third_item.name,fourth_item.name,fifth_item.name,sixth_item.name]
+#
+# print(first_army)
+# ---------------------------------------------------------------------------------
+# CWICZENIE
+# Dodaj kolejny atrybut o nazwie „quantity” do metody inicjalizacji (zwykle nazywanej konstruktorem lub __init__).
+# Następnie zdefiniuj przypisanie tego atrybutu do atrybutu self.quantity wewnątrz konstruktora.
+# Następnie utwórz 2 instancje dla: F14 i Mirage2000 z ilościami 87 i 35.
+# Wskazówka 1
+# Możesz dodać parametr quantity do konstruktora w następujący sposób:
+# def __init__(self, name, country, quantity):
+# Następnie musisz przypisać ten parametr do atrybutu self, aby istniało sensowne połączenie między parametrem a atrybutem.
+# Wskazówka 2
+# Możesz dodać parametr quantity do konstruktora w następujący sposób:
+# def __init__(self, name, country, quantity):
+#
+#     self.name = name
+#     self.origin = country
+#     self.quantity = quantity
+# Następnie musisz przypisać ten parametr do atrybutu self, aby istniało sensowne połączenie między parametrem a atrybutem.
+# Wskazówka 3
+# Możesz tworzyć instancje klasy Jets jak poniżej:
+
+first_item=Jets("F14","USA",87)
+second_item=Jets("Mirage2000","France",35)
+
+class Jets:
+    def __init__(self, name, country, quantity):
+        self.name = name
+        self.origin = country
+        self.quantity = quantity
+first_item=Jets("F14","USA",87)
+second_item=Jets("Mirage2000","France",35)
+
+total= first_item.quantity + second_item.quantity
+print(total)
 
 
 
