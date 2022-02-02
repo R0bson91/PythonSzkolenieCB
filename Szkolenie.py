@@ -1622,33 +1622,50 @@
 # p = Rownoleglobok(3,4,6)
 # print(p.obwod())
 # print(p.pole())
-#
 # ---------------------------------------------------------------------------------
 # CWICZENIE - TRAPEZ PROSTOKĄTNY
 #
-import math
-
-class Figura:
-    def obwod(self):  # L
-        """Obliczanie obwodu."""
-        raise NotImplementedError
-
-    def pole(self):  # S/P
-        """Obliczanie pola powierzchni."""
-        raise NotImplementedError
-
-class Trapez(Figura):
-    def __init__(self, a, b, c, d, h):
-        self.a = a
-        self.b = b
-        self.c = c
-        self.d = d
-        self.h = h
-    def obwod(self):
-        return self.a + self.b + self.c + self.d
-    def pole(self):
-        return self.h * ((self.a + self.b)/2)
-
-p = Trapez(3,4,6,7,9)
-print(p.obwod())
-print(p.pole())
+# import math
+#
+# class Figura:
+#     def obwod(self):  # L
+#         """Obliczanie obwodu."""
+#         raise NotImplementedError
+#
+#     def pole(self):  # S/P
+#         """Obliczanie pola powierzchni."""
+#         raise NotImplementedError
+#
+# class Trapez(Figura):
+#     def __init__(self, a, b, c, d, h):
+#         self.a = a
+#         self.b = b
+#         self.c = c
+#         self.d = d
+#         self.h = h
+#     def obwod(self):
+#         return self.a + self.b + self.c + self.d
+#     def pole(self):
+#         return self.h * ((self.a + self.b)/2)
+#
+# p = Trapez(3,4,6,7,9)
+# print(p.obwod())
+# print(p.pole())
+# ---------------------------------------------------------------------------------
+# CWICZENIE
+# Utwórz podrzędną klasę Bus, która odziedziczy wszystkie zmienne i metody klasy Vehicle
+# Utwórz obiekt klasy Bus, która dziedziczy wszystkie zmienne i metody klasy Vehicle i wyświetli je.
+# Oczekiwany wynik: Nazwa pojazdu: Szkolne Volvo Prędkość: 180 Przebieg: 12
+#
+# class Vehicle:
+#
+#     def __init__(self, name, max_speed, mileage):
+#         self.name = name
+#         self.max_speed = max_speed
+#         self.mileage = mileage
+# class Bus(Vehicle):
+#     pass
+# poj = Bus("Autobus szkolny", 180, 12)
+# print(poj.mileage, poj.name, poj.max_speed)
+# ---------------------------------------------------------------------------------
+# CWICZENIE - dziedziczenie klas
